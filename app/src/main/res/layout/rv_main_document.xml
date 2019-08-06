@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:background="@color/brown"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:id="@+id/rv_main_view"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/rv_main_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>
