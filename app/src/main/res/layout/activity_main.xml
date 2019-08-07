@@ -23,7 +23,7 @@
                 android:textStyle="normal"
                 android:fontFamily="sans-serif-medium"
                 android:textSize="18sp"
-                android:text="김진희"
+                android:text="@string/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -43,7 +43,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="검색어를 입력하세요"/>
+                android:hint="@string/search_word"/>
 
         <ImageView
                 android:id="@+id/act_main_iv_search"
