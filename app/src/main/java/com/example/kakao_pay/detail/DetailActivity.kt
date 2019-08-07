@@ -45,6 +45,7 @@ class DetailActivity : AppCompatActivity() {
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
 
             }
+
             override fun onPageSelected(position: Int) {
 
             }
@@ -70,13 +71,19 @@ class DetailActivity : AppCompatActivity() {
         return act_detail_vp.currentItem + i
     }
 
-    private fun checkFirstPosition(){
+    private fun checkFirstPosition() {
         if (act_detail_vp.currentItem == 0) {
             act_detail_iv_left.isClickable = false
             act_detail_iv_left.visibility = View.INVISIBLE
-        }else{
+        } else if(act_detail_vp.adapter!!.count == act_detail_vp.currentItem + 1){
+            act_detail_iv_right.isClickable = false
+            act_detail_iv_right.visibility = View.INVISIBLE
+        }
+        else {
             act_detail_iv_left.isClickable = true
             act_detail_iv_left.visibility = View.VISIBLE
+            act_detail_iv_right.isClickable = true
+            act_detail_iv_right.visibility = View.VISIBLE
         }
     }
 }
