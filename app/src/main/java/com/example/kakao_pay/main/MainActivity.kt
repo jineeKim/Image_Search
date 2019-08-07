@@ -64,22 +64,27 @@ class MainActivity : AppCompatActivity() {
 
     private fun searchData() {
         act_main_iv_search.setOnClickListener {
-            searchWord = act_main_et_search_word.text.toString()
-            loadData(getString(R.string.accuracy))
+            getSearchWord()
             it.hideKeyboard()
         }
 
         act_main_et_search_word.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-                searchWord = act_main_et_search_word.text.toString()
-                loadData(getString(R.string.accuracy))
+                getSearchWord()
                 v.hideKeyboard()
                 return@OnKeyListener true
             }
             false
         })
+    }
 
-
+    private fun getSearchWord() {
+        searchWord = act_main_et_search_word.text.toString()
+        if (searchWord == "") {
+            longToast(getString(R.string.check_search_word))
+        } else {
+            loadData(getString(R.string.accuracy))
+        }
     }
 
     private fun View.hideKeyboard() {

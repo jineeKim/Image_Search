@@ -4,5 +4,6 @@
     <string name="accuracy">accuracy</string>
     <string name="recency">recency</string>
     <string name="name">김진희</string>
-    <string name="search_word">검색어를 입력하세요</string>
+    <string name="search_word">검색어를 입력하세</string>
+    <string name="check_search_word">검색어를 입력해 주세요</string>
 </resources>
